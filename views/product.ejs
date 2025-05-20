@@ -9,9 +9,13 @@
     <main>
       <%- include('partials/navigation', { menuLinks: menuLinks, activeLinkPath:
       activeLinkPath, cartCount: cartCount }); %>
-      <h1 class="heading"><%= product.name %></h1>
-      <div><%= product.description %></div>
-      <button onclick="deleteProduct('<%= product.name %>')">Delete</button>
+      <h1 class="product__title"><%= product.name %></h1>
+      <div class="product__description"><%= product.description %></div>
+      <p class="product__price"><%= product.price %></p>
+      <div class="product__button">
+        <button class="product__button--add" onclick="addToCart('<%= product.name %>'); return false;">Add to Cart</button>
+        <button class="product__button--delete" onclick="deleteProduct('<%= product.name %>')">Delete</button>
+      </div>
     </main>
     <script>
       function deleteProduct(name) {
@@ -20,12 +24,25 @@
         }
 
         fetch(`/products/${name}`, {
-          method: "DELETE",
+            method: "DELETE",
+          }).then((response) => {
+          if (response.ok) {
+            window.location.href = "/products";
+          } else {
+            alert("Error while removing product.");
+          }
+        });
+      }
+    </script>
+    <script>
+      function addToCart(name) {
+        fetch(`/cart/add/${name}`, {
+          method: "POST"
         }).then((response) => {
           if (response.ok) {
             window.location.reload();
           } else {
-            alert("Error while removing product.");
+            alert("Failed to add product to cart.");
           }
         });
       }

@@ -1,8 +1,8 @@
 {
   "name": "laboratory-classes-8",
   "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "description": "W trakcie pracy nad zadaniami (ćwiczeniami), będziecie spotykać się z różnymi pomocnikami, którzy będą wskazywać, co należy zrobić w danym fragmencie kodu. Im dalsze ćwiczenie, tym rzadziej będą się pojawiać. Oto krótka charakterystyka każdego z nich:",
+  "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
     "electron": "electron ."
@@ -19,6 +19,14 @@
   "devDependencies": {
     "electron": "^36.1.0",
     "nodemon": "^3.1.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/incmrijdty/laboratory-classes-8.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/incmrijdty/laboratory-classes-8/issues"
+  },
+  "homepage": "https://github.com/incmrijdty/laboratory-classes-8#readme"
 }
-

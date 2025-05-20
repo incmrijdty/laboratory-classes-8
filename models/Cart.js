@@ -113,6 +113,12 @@ class Cart {
       console.error("Error occurred while clearing cart");
     }
   }
+
+  static async deleteProductByName() {
+    const db = getDatabase();
+
+    
+  } 
 }
 
 module.exports = Cart;

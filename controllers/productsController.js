@@ -18,8 +18,6 @@ exports.getProductsView = async (request, response) => {
     products,
     cartCount,
   });
-
-  console.log(cartCount);
 };
 
 exports.getAddProductView = async (request, response) => {
@@ -32,8 +30,6 @@ exports.getAddProductView = async (request, response) => {
     activeLinkPath: "/products/add",
     cartCount,
   });
-
-  console.log(cartCount);
 };
 
 exports.getNewProductView = async (request, response) => {
@@ -48,8 +44,6 @@ exports.getNewProductView = async (request, response) => {
     newestProduct,
     cartCount,
   });
-
-  console.log(cartCount);
 };
 
 exports.getProductView = async (request, response) => {
@@ -66,8 +60,6 @@ exports.getProductView = async (request, response) => {
     product,
     cartCount,
   });
-
-  console.log(cartCount);
 };
 
 exports.deleteProduct = async (request, response) => {
